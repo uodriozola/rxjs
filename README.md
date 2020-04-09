@@ -2,5 +2,5 @@
 Curso de rxjs
 
 # Creación de observables
-[Contribution guidelines for this project](docs/CONTRIBUTING.md)
+[Función create](docs/CONTRIBUTING.md)
 
