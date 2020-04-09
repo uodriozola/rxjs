@@ -12,6 +12,6 @@ Curso de rxjs
 
 [Funciones "interval" y "time" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/05-interval-and-timer/src/create.js)
 
-[Función "fromEven" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/06-fromevent/src/create.js)
+[Función "fromEvent" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/06-fromevent/src/create.js)
 
 
