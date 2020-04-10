@@ -28,4 +28,6 @@ Curso de rxjs
 # Utilidades
 [Operadores "startWith" y "endWith" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/12-startwith-endwidth/src/sandbox.js)
 
+[Operadores "distinct" y "distinctUntilChanged" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/13-distinct-distinctuntilchanged/src/sandbox.js)
+
 
