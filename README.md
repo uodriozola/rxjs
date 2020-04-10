@@ -30,4 +30,6 @@ Curso de rxjs
 
 [Operadores "distinct" y "distinctUntilChanged" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/13-distinct-distinctuntilchanged/src/sandbox.js)
 
+[Operador "pairwise" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/14-pairwise/src/sandbox.js)
+
 
