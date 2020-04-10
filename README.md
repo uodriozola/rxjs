@@ -15,6 +15,8 @@ Curso de rxjs
 [Función "fromEvent" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/06-fromevent/src/create.js)
 
 # Operadores básicos
-[Operadores "mapTo", "map" y "filter" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/07-mapto-map-and-filter/src/create.js)
+[Operadores "mapTo", "map" y "filter" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/07-mapto-map-and-filter/src/sandbox.js)
+
+[Operador "tap" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/08-tap/src/sandbox.js)
 
 
