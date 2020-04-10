@@ -7,7 +7,7 @@ export default () => {
     const progressBar = document.getElementById('progress-bar');
     const docElement = document.documentElement;
 
-    //share: Convierte el Observable de manera que este comparta una única instancia con todas sus suscripciones
+    //share: Convierte el Observable de manera que este comparta una única instancia con todas sus suscripciones (Hot Observable)
     // El flujo de datos se inicia con el primer observer que se suscribe y se cancela cuando el último de ellos cancela su suscripción
 
     // Este operador es útil cuando se tienen varias suscripciones
