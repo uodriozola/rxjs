@@ -1,4 +1,4 @@
-# rxjs
+# RXJS
 Curso de rxjs
 
 # Creación de observables
