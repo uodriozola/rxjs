@@ -1,12 +1,18 @@
 import { updateDisplay } from './utils';
 import { fromEvent } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
+import { map, tap, share } from 'rxjs/operators';
 
 export default () => {
-    /** start coding */
     
     const progressBar = document.getElementById('progress-bar');
     const docElement = document.documentElement;
+
+    //share: Convierte el Observable de manera que este comparta una única instancia con todas sus suscripciones
+    // El flujo de datos se inicia con el primer observer que se suscribe y se cancela cuando el último de ellos cancela su suscripción
+
+    // Este operador es útil cuando se tienen varias suscripciones
+    // En este ejemplo al tener 2 subscripciones tengo 2 instancias del Observable
+    // Cada una de esas instancias ejecutara los operadores a cada evento (salvo si usamos el operador share)
 
     //function to update progress bar width on view
     const updateProgressBar = (percentage) => {
@@ -24,12 +30,12 @@ export default () => {
         map(evt => {
             const docHeight = docElement.scrollHeight - docElement.clientHeight;
             return (evt / docHeight) * 100;
-        })
+        }),
+        share()
     )
 
     //subscribe to scroll progress to paint a progress bar
     const subscription = scrollProgress$.subscribe(updateProgressBar);
 
-
-    /** end coding */
+    const subscription2 = scrollProgress$.subscribe(res => updateDisplay(`${Math.floor(res)}%`));
 }
