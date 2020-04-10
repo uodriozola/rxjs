@@ -1,18 +1,41 @@
 import { displayLog } from './utils';
 import { fromEvent } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, first, take, takeWhile } from 'rxjs/operators';
 
 export default () => {
-    /** start coding */
+
+    // Estos operadores sirven para limitar el número de eventos que recibes de un stream
+
     const grid = document.getElementById('grid');
-    const click$ = fromEvent(grid, 'click').pipe(
+
+    // first: Operador que sirve para recibir solo el primer valor emitido por el stream
+    // También se le pueden indicar unas condiciones concretas que tiene que cumplir el evento para ser considerado válido
+    const clickFirst$ = fromEvent(grid, 'click').pipe(
         map(val => [ 
             Math.floor(val.offsetX/50), 
             Math.floor(val.offsetY/50)
-        ])
+        ]),
+        first(([col, row]) => col > 3)
     );
 
-    const subscription = click$.subscribe(data => displayLog(data));
+    // take: Permite indicar cuántos eventos quieres recibir antes de cerrar el stream
+    const clickTake$ = fromEvent(grid, 'click').pipe(
+        map(val => [ 
+            Math.floor(val.offsetX/50), 
+            Math.floor(val.offsetY/50)
+        ]),
+        take(3)
+    );
 
-    /** end coding */
+    // takeWhilte: Emite eventos mientras se cumpla una determinada condición
+    const clickTakeWhile$ = fromEvent(grid, 'click').pipe(
+        map(val => [ 
+            Math.floor(val.offsetX/50), 
+            Math.floor(val.offsetY/50)
+        ]),
+        takeWhile(([col, row]) => col > 3)
+    );
+
+    const subscription = clickTakeWhile$.subscribe(data => displayLog(data));
+
 }
