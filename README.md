@@ -23,4 +23,6 @@ Curso de rxjs
 
 [Operadores "last", "takeLast" y "skip" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/10-last-takelast-skip/src/sandbox.js)
 
+[Operadores "reduce" y "scan" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/11-reduce-scan/src/sandbox.js)
+
 
