@@ -32,4 +32,6 @@ Curso de rxjs
 
 [Operador "pairwise" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/14-pairwise/src/sandbox.js)
 
+[Hot & Cold Observables: Operador "share" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/15-share/src/sandbox.js)
+
 
