@@ -21,4 +21,6 @@ Curso de rxjs
 
 [Operadores "first", "take" y "takeWhile" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/09-first-take-takewhile/src/sandbox.js)
 
+[Operadores "last", "takeLast" y "skip" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/10-last-takelast-skip/src/sandbox.js)
+
 
