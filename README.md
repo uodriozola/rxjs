@@ -19,4 +19,6 @@ Curso de rxjs
 
 [Operador "tap" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/08-tap/src/sandbox.js)
 
+[Operadores "first", "take" y "takeWhile" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/09-first-take-takewhile/src/sandbox.js)
+
 
