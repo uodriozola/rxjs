@@ -34,4 +34,6 @@ Curso de rxjs
 
 [Hot & Cold Observables: Operador "share" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/15-share/src/sandbox.js)
 
+[Subject, BehaviorSubject y los Hot Observables](https://github.com/uodriozola/rxjs/blob/dev/16-subject/src/sandbox.js)
+
 
