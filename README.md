@@ -25,4 +25,7 @@ Curso de rxjs
 
 [Operadores "reduce" y "scan" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/11-reduce-scan/src/sandbox.js)
 
+# Utilidades
+[Operadores "startWith" y "endWith" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/12-startwith-endwidth/src/sandbox.js)
+
 
