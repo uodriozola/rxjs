@@ -3,8 +3,9 @@ import { fromEvent } from 'rxjs';
 import { map, tap, share } from 'rxjs/operators';
 
 export default () => {
-    /** start coding */
 
+    // Subject: Es un tipo especial de Observable con 3 propiedades:
+        // 1. Permite hacer multicast de sus valores hacia varios Observers (Hot Observable)
     const progressBar = document.getElementById('progress-bar');
     const docElement = document.documentElement;
 
