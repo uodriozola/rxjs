@@ -40,4 +40,6 @@ Curso de rxjs
 [Operadores "sampleTime", "throttleTime" y "auditTime"
 de RxJS](https://github.com/uodriozola/rxjs/blob/dev/17-sampletime-throttletime-audittime/src/sandbox.js)
 
+[Operadores "delay" y "buffertime" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/18-delay-buffer-time/src/sandbox.js)
+
 
