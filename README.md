@@ -36,4 +36,8 @@ Curso de rxjs
 
 [Subject, BehaviorSubject y los Hot Observables](https://github.com/uodriozola/rxjs/blob/dev/16-subject/src/sandbox.js)
 
+# Operadores temporales
+[Operadores "sampleTime", "throttleTime" y "auditTime"
+de RxJS](https://github.com/uodriozola/rxjs/blob/dev/17-sampletime-throttletime-audittime/src/sandbox.js)
+
 
