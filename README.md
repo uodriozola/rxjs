@@ -42,4 +42,6 @@ de RxJS](https://github.com/uodriozola/rxjs/blob/dev/17-sampletime-throttletime-
 
 [Operadores "delay" y "buffertime" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/18-delay-buffer-time/src/sandbox.js)
 
+[Operador "debounceTime" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/19-debouncetime/src/sandbox.js)
+
 
