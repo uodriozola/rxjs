@@ -54,6 +54,6 @@ de RxJS](https://github.com/uodriozola/rxjs/blob/dev/17-sampletime-throttletime-
 # High Order Observables (HOO)
 [Introducción a los HOO, "mergeAll" y "mergeMap"](https://github.com/uodriozola/rxjs/blob/dev/23-hoo-mergeall-mergemap/src/sandbox.js)
 
-[Operadores "switchMap" y "concatMap" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/24-hoo-switchmap-concatmap /src/sandbox.js)
+[Operadores "switchMap" y "concatMap" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/24-hoo-switchmap-concatmap/src/sandbox.js)
 
 
