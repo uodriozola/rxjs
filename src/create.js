@@ -14,6 +14,8 @@ export default () => {
     // El operador from se utiliza para convertir Promises en Observables
     const observable = from(myPromise);
 
+    // También se puede utilizar para convertir un array en un flujo de datos
+
     const subscription = observable.subscribe(res => displayLog(res));
 
     /** end coding */
