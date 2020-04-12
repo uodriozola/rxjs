@@ -44,4 +44,7 @@ de RxJS](https://github.com/uodriozola/rxjs/blob/dev/17-sampletime-throttletime-
 
 [Operador "debounceTime" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/19-debouncetime/src/sandbox.js)
 
+# Combinación de observables
+[Funciones "zip" y "merge" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/20-zip-merge/src/sandbox.js)
+
 
