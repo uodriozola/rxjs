@@ -1,6 +1,6 @@
 import { updateDisplay, displayLog } from './utils';
-import { fromEvent } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { fromEvent, zip, merge } from 'rxjs';
+import { map, tap, scan, filter, distinctUntilChanged } from 'rxjs/operators';
 
 export default () => {
     /** start coding */
@@ -57,7 +57,46 @@ export default () => {
         }));        
 
 
-    //TODO: draw current line
+    //TODO: draw event line
+
+    const computeDrawState = (prevState, event) => {
+        switch(prevState.label) {
+            case 'init':
+            case 'end':
+                if (event.label == 'start') {
+                    return { origin: event.coords, ...event }
+                }
+                break;
+            case 'start':
+            case 'drawing':
+                return { origin: prevState.origin, ...event }
+        };
+        return prevState;
+    };
+
+    // zip: Combina varios flujos de datos en un único observable que devuelve un array con los valores de los observables de entrada
+    // Se espera a tener un valor de cada entrada para emitir el evento de salida
+    const drawLineZip$ = zip(mouseStart$, mouseEnd$).pipe(
+        tap(res => console.log(res)),
+        map(([start, end]) => {
+            return {
+                origin: start.coords,
+                end: end.coords
+            }
+        })
+    );
+
+    // merge: Entrelaza los flujos de distintos observables en un único flujo de datos
+    // No espera a tener datos de todos los flujos de entrada ni los devuelve como un array
+    const drawLineMerge$ = merge(mouseStart$, mouseMove$, mouseEnd$).pipe(
+        scan(computeDrawState, { label: 'init'}),
+        tap(res => console.log(res)),
+        filter(res => res.origin && res.coords),
+        distinctUntilChanged(),
+        tap(res => console.log(res))
+    );
+
+    const subscription = drawLineMerge$.subscribe(res => drawLine(res.origin, res.coords));
 
     
 
