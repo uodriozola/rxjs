@@ -47,6 +47,6 @@ de RxJS](https://github.com/uodriozola/rxjs/blob/dev/17-sampletime-throttletime-
 # Combinación de observables
 [Funciones "zip" y "merge" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/20-zip-merge/src/sandbox.js)
 
-[Operadores "concat" y "forkJoin" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/21-concat-forkjoin /src/sandbox.js)
+[Operadores "concat" y "forkJoin" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/21-concat-forkjoin/src/sandbox.js)
 
 
