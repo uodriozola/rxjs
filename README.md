@@ -56,4 +56,6 @@ de RxJS](https://github.com/uodriozola/rxjs/blob/dev/17-sampletime-throttletime-
 
 [Operadores "switchMap" y "concatMap" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/24-hoo-switchmap-concatmap/src/sandbox.js)
 
+[High Order Observables: de Arrays a Eventos](https://github.com/uodriozola/rxjs/blob/dev/25-hoo-arrays/src/sandbox.js)
+
 
