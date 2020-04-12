@@ -51,4 +51,7 @@ de RxJS](https://github.com/uodriozola/rxjs/blob/dev/17-sampletime-throttletime-
 
 [Operadores "combineLatest" y "withLatestFrom" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/22-combinelatest-withlatestfrom/src/sandbox.js)
 
+# High Order Observables (HOO)
+[Introducción a los HOO, "mergeAll" y "mergeMap"](https://github.com/uodriozola/rxjs/blob/dev/23-hoo-mergeall-mergemap/src/sandbox.js)
+
 
