@@ -49,4 +49,6 @@ de RxJS](https://github.com/uodriozola/rxjs/blob/dev/17-sampletime-throttletime-
 
 [Operadores "concat" y "forkJoin" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/21-concat-forkjoin/src/sandbox.js)
 
+[Operadores "combineLatest" y "withLatestFrom" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/22-combinelatest-withlatestfrom/src/sandbox.js)
+
 
