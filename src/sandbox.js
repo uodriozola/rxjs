@@ -1,6 +1,6 @@
 import { updateDisplay } from './utils';
 import { fromEvent, interval, merge, EMPTY } from 'rxjs';
-import { mapTo, scan, takeWhile, switchMap, startWith  } from 'rxjs/operators';
+import { mapTo, scan, takeWhile, switchMap, startWith, materialize, tap, dematerialize } from 'rxjs/operators';
 
 export default () => {
     /** start coding */
@@ -20,16 +20,26 @@ export default () => {
     /** 1s negative interval */
     const interval$ = interval(1000).pipe(mapTo(-1));
 
+    // Notificación: Es un objeto que representa una acción push de un observable
+
+    // materialize: Genera eventos a partir de las notificaciones de un observable
+    // Incluso cuando hay un error primero se emite un evento con esta información y luego se completa el stream
+
+    // dematerialize: Proporciona el proceso inverso a materialize
+    // Recibe eventos en forma de notificaciones y los transforma en acciones sobre el propio observable
+
     /** countdown timer */
     const countdown$ = isPaused$.pipe(
         startWith(false),
-        switchMap(paused => !paused ? interval$ : EMPTY),
+        switchMap(paused => !paused ? interval$.pipe(materialize()) : EMPTY.pipe(materialize())),
+        dematerialize(),
         scan((acc, curr) => ( curr ? curr + acc : curr ), countdownSeconds),
-        takeWhile(v => v >= 0)
+        takeWhile(v => v >= 0),
+        tap(console.log)
     );
 
     /** subscribe to countdown */
-    countdown$.subscribe(updateDisplay);
+    countdown$.subscribe(updateDisplay, null, () => console.log('complete'));
 
     
     /** end coding */
