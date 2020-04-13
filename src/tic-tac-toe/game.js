@@ -1,4 +1,8 @@
-import { Observable } from 'rxjs';
+import { Observable, merge } from 'rxjs';
+import { scan, startWith, tap, takeWhile } from 'rxjs/operators';
+import { userMove$ } from './userMove';
+import { computerMove$, simulateComputerTurn } from './computerMove';
+import { gameState$ } from './gameState';
 
 //pure function to find out empty cells
 export const getEmptyCells = (board) =>{
@@ -34,11 +38,38 @@ const findOutWinner = board =>{
     return null;  
 }
 
-//initial game state
-const initialGame = {
-    board: Array(3).fill().map(() => Array(3).fill(0))
+// Actualiza el estado de la partida
+const updateGameState = (gameState, move) => {
+    if(!move) {
+        return gameState;
+    }
+    let updatedBoard = [...gameState.board];
+    updatedBoard[move.y][move.x] = gameState.nextPlayer;
+    const haveEmptyCells = getEmptyCells(updatedBoard).length == 0 ? false : true;
+    let finished = !haveEmptyCells;
+    const winner = findOutWinner(updatedBoard);
+    if(winner) {
+        finished = true;
+    }
+    return {
+        board: updatedBoard,
+        nextPlayer: gameState.nextPlayer == 1 ? 2 : 1,
+        finished: finished,
+        winner: winner
+    }
 }
+
     
 
-//main observable with the game logic. Right now only emiting the board
-export const game$ = new Observable(obs => obs.next(initialGame));
+//main observable with the game logic.
+export const game$ = merge(userMove$, computerMove$).pipe(
+    startWith(null),
+    scan(updateGameState, gameState$.value),
+    tap(state => gameState$.next(state)),
+    tap(state => {
+        if(state.nextPlayer == 2 && !state.finished) {
+            simulateComputerTurn(getEmptyCells(state.board));
+        }
+    }),
+    takeWhile(({ finished }) => finished == false, true)
+);
