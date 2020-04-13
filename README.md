@@ -61,6 +61,6 @@ de RxJS](https://github.com/uodriozola/rxjs/blob/dev/17-sampletime-throttletime-
 # Utilidades avanzadas
 [Operadores "throwError", "catchError" y "retry" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/26-throwerror-catcherror-retry/src/sandbox.js)
 
-[Constantes "NEVER" y "EMPTY" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/27-never-empty /src/sandbox.js)
+[Constantes "NEVER" y "EMPTY" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/27-never-empty/src/sandbox.js)
 
 
