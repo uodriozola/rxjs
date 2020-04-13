@@ -63,4 +63,6 @@ de RxJS](https://github.com/uodriozola/rxjs/blob/dev/17-sampletime-throttletime-
 
 [Constantes "NEVER" y "EMPTY" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/27-never-empty/src/sandbox.js)
 
+[Eventos y Notificaciones: "materialize" y "dematerialize"](https://github.com/uodriozola/rxjs/blob/dev/28-materialize-dematerialize/src/sandbox.js)
+
 
