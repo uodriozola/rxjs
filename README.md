@@ -58,4 +58,7 @@ de RxJS](https://github.com/uodriozola/rxjs/blob/dev/17-sampletime-throttletime-
 
 [High Order Observables: de Arrays a Eventos](https://github.com/uodriozola/rxjs/blob/dev/25-hoo-arrays/src/sandbox.js)
 
+# Utilidades avanzadas
+[Operadores "throwError", "catchError" y "retry" de RxJS](https://github.com/uodriozola/rxjs/blob/dev/26-throwerror-catcherror-retry/src/sandbox.js)
+
 
